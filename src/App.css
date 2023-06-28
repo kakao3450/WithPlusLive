@@ -1,0 +1,104 @@
+html,
+body {
+  font-family: "Noto Sans";
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+:root {
+  --vh: 100%;
+}
+
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("./assets/fonts/roboto/Roboto-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("./assets/fonts/roboto/Roboto-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSansKR-Medium";
+  src: url("./assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSansKR-Regular";
+  src: url("./assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSans-Medium";
+  src: url("./assets/fonts/Noto_Sans/NotoSans-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "NotoSans";
+  src: url("https://fonts.googleapis.com/css?family=Noto+Sans");
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+.notosans * {
+  font-family: "Noto Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #80808050;
+  /* border-radius: 10px; */
+  /* box-shadow: inset 0px 0px 5px white; */
+}
+.MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
+.MuiDataGrid-root .MuiDataGrid-cell:focus {
+  outline: none !important;
+}
+
+.MuiDataGrid-cell--withRenderer {
+  display: flex;
+  justify-content: center;
+}
+.MuiDataGrid-cell--withRenderer:focus {
+  outline: none !important;
+}
+
+fieldset {
+  border: none !important;
+  outline: none !important;
+}
+.poll-canvas::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}

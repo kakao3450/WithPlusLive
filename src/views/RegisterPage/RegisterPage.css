@@ -1,0 +1,58 @@
+/* .check {
+  display: none;
+} */
+
+/*input 은 숨겨주기*/
+/* input#terms_check {
+  display: none;
+} */
+/*input 바로 다음의 label*/
+input#terms_check {
+  cursor: pointer;
+}
+
+input#terms_check {
+  width: 18px;
+  height: 18px;
+}
+input#terms_check:checked {
+  background-color: #c33c3c;
+}
+input#terms_check + label {
+  cursor: pointer;
+}
+
+/* .content p {
+  padding: 0;
+  margin: 0;
+  font: small-caption;
+  line-height: 1.25rem;
+} */
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+/*input 바로 다음의 label:before 에 체크하기 전 CSS 설정*/
+/* input#terms_check + label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  border: 1px solid #cbcbcb;
+  vertical-align: middle; 
+} */
+
+/*checked된 input 바로 다음의 label:before 에 체크 후 CSS 설정*/
+/* input#terms_check:checked + label:before {
+  content: "ㅁ"; 
+  font-family: "Font Awesome 5 free"; 
+  font-weight: 900; 
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  font-size: 13px;
+  text-align: center;
+} */
+

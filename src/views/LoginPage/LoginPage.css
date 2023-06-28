@@ -1,0 +1,129 @@
+.LockIcon {
+  color: white;
+}
+
+.circle-purple {
+  background-color: blueviolet;
+}
+
+.box {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.textField {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.test {
+  font-size: small;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-background {
+  background-color: white;
+  width: 60%;
+  height: 65%;
+  box-shadow: 0px 3px 6px #00000029;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 1000px;
+}
+
+.login-background[data-issignup="true"] {
+  flex-direction: row-reverse;
+}
+
+.login-background .wide {
+  width: 65%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.login-container {
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 100%;
+}
+
+.login-text-title {
+  font-family: "Roboto-Bold";
+  color: #c33c3c;
+  font-size: 35px;
+  margin-bottom: 0.5em;
+}
+
+.create-account-background {
+  background-color: #c33c3c;
+  width: 35%;
+  height: 100%;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.create-account-background[data-issignup="true"] {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.container2 {
+  position: relative;
+  width: 1100px;
+  height: 600px;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/** mobile css */
+.mobile-login {
+  height: calc(var(--vh, 1vh) * 100);
+  text-align: center;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.mobile-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mobile-login-text-title {
+  font-family: "Roboto-Bold";
+  color: #191919;
+  font-size: 25px;
+  margin-bottom: 0.5em;
+}
+
+.mobile-login-container {
+  width: 100%;
+  height: auto;
+}
