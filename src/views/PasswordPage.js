@@ -24,7 +24,7 @@ const PasswordPage = () => {
     query: "(max-width:767px)",
   });
 
-  /** 비밀번호 정규식 */
+  /** 비밀번호 정규식 */ // 아래껀 이메일 정규표현식으로 작성된 것 같음_이정욱
   const regExp =
     // eslint-disable-next-line
     /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
@@ -34,8 +34,12 @@ const PasswordPage = () => {
 
   // * 비밀번호 초기화 및 초기화된 비밀번호 메일로 전송
   const resetPassword = async () => {
+    //test() 메서드는 정규식과 지정된 문자열 간의 일치 검색을 실행 함_ 이정욱
     if (regExp.test(email)) {
-      axios.get("/account/resetPassword", { params: { email: email } }).then((response) => {
+      // email로 사용자 요청_이정욱                                    
+      axios.get("/account/resetPassword", { params: { email: email } })
+      // 응답 성공시 서버에 있는 패스워드 보내고 알림 문구 팝업_이정욱
+      .then((response) => {
         let data = response.data;
 
         if (data.success) {

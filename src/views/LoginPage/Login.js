@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import { motion } from "framer-motion";
-import axios from "axios";
+// import { motion } from "framer-motion";
+// import axios from "axios";
 
-import { socket } from "../../utils/socket";
-import logo from "../../assets/images/withplus Logo.png";
+// import { socket } from "../../utils/socket";
+// import logo from "../../assets/images/withplus Logo.png";
 import kakao from "../../assets/images/kakao_login_medium_wide.png";
 import KAKAO from "../../config/kakao";
+
 
 import {
   Button,
@@ -24,8 +25,12 @@ import {
   FormControlLabel,
 } from "@mui/material";
 
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+// import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { LOGIN_USER } from "utils/api";
+import  Google  from "views/oAuth/Google";
+import Naver from "views/oAuth/Naver";
+
+
 
 function Login(props) {
   const navigate = useNavigate();
@@ -118,6 +123,7 @@ function Login(props) {
       redirectUri: KAKAO.REDIRECT_PAGE,
     });
   };
+
 
   // // * 체크박스 변경시 로그인 타입명 변경
   // useEffect(() => {
@@ -265,107 +271,18 @@ function Login(props) {
                     <img src={kakao} alt="카카오 아이콘" onClick={KakaoLogin} />
                   </button>
                 </Box>
-              </div>
-            </Box>
-          </Container>
-        </div>
-      )}
-      {/* 모바일 화면 */}
-      {isMobile && (
-        <div className="mobile-login-container">
-          <Container
-            maxWidth="md"
-            sx={{
-              height: "100%",
-              // textAlign: "center",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Box onSubmit={handleSubmit} component="form" sx={{ width: "100%" }}>
-              <div className="mobile-login-text-title">Login</div>
-              {/* 이메일, 비밀번호 입력 필드 */}
-              <div
-                style={{
-                  display: "block",
-                  justifyContent: "center",
-                  marginTop: "3%",
-                }}
-              >
-                <TextField
-                  sx={{
-                    width: "80%",
-                    // height: "70px",
-                    border: "none",
-                  }}
-                  type="text"
-                  margin="normal"
-                  label="이메일"
-                  required
-                  onChange={(e) => handleEmail(e)}
-                  autoComplete="off"
-                  variant="standard"
-                />
-                {/* 패스워드 Textfield */}
-                <TextField
-                  sx={{
-                    width: "80%",
-                    // height: "70px",
-                    border: "none",
-                  }}
-                  type="password"
-                  margin="normal"
-                  label="패스워드"
-                  required
-                  onChange={(e) => handlePassword(e)}
-                  variant="standard"
-                />
-
-                {/* 비밀번호 찾기 */}
-                <div style={{ marginTop: "5%" }}>
-                  <Link
-                    className="test"
-                    onClick={goToPasswordPage}
-                    sx={{
-                      cursor: "pointer",
-                      fontFamily: "Noto Sans",
-                      fontSize: "15px",
-                      color: "#191919",
-                    }}
-                  >
-                    비밀번호를 잊으셨나요? →
-                  </Link>
-                </div>
-                {/* 로그인 버튼 */}
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{
-                    width: "80%",
-                    display: "block",
-                    margin: "auto",
-                    mt: 3,
-                    mb: 2,
-                    fontFamily: "Noto Sans",
-                    fontWeight: "bold",
-                    fontSize: "17px",
-                    borderRadius: "5px",
-                  }}
-                >
-                  로그인
-                </Button>
-
-                {/* 카카오 로그인  */}
-                <Box sx={{ display: "flex", justifyContent: "center" }}>
-                  <button className="kakao-button">
-                    <img src={kakao} alt="카카오 아이콘" onClick={KakaoLogin} />
-                  </button>
+                {/*구글 로그인*/}
+                <Box sx={{ display: "flex", justifyContent: "space-around",marginTop:"1em",width:"135px",marginLeft:"18rem"}}>
+                  <Google/>
+                  <Naver/>
                 </Box>
+                {/* 네이버 로그인
+                <Box sx={{ display: "flex", justifyContent: "center",marginTop:"1em", backgroundColor:"green",width:"20px"}}>
+                  <Naver/>
+                </Box> */}
               </div>
             </Box>
-          </Container>
+          </Container> 
         </div>
       )}
     </>

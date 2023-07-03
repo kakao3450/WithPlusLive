@@ -11,8 +11,12 @@ import { Button } from "@mui/material";
 import { CheckBoxOutlineBlankSharp } from "@mui/icons-material";
 
 const LoginPage = (props) => {
+  // useLocation은 현재 경로 정보를 사용하게 해줌 _ 이정욱
   const location = useLocation();
+  // location.state?.state은 이전 페이지에서 전달된 state가 null이나 undefind면 오류를 발생 시키지 않고 그냥 undefind로 반환
   const [isSignUp, setIsSignUp] = useState(location.state?.state);
+
+
 
   // 반응형 웹
   const isPc = useMediaQuery({

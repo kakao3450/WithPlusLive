@@ -157,7 +157,8 @@ const Terms = ({ visible, switchVisible }) => {
               maxHeight: "100px",
             }}
           >
-            <TermOfPrivateInfo />
+            
+            {/* <TermOfPrivateInfo /> */}
           </Box>
         </Box>
 

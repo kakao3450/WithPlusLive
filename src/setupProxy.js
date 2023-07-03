@@ -18,4 +18,12 @@ module.exports = function (app) {
       changeOrigin: true,
     })
   );
+
+  app.use(
+    "/naver",
+    createProxyMiddleware({
+      target: "http://localhost",
+      changeOrigin: true,
+    })
+  );
 };

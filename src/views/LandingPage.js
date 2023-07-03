@@ -17,12 +17,14 @@ import "./style.css";
 // * 랜딩페이지
 const LandingPage = (props) => {
   const navigate = useNavigate();
-
+  // 링크와 같은 역활을 하지만, 특정 조건을 충족할 경우 페이지를 이동 가능하게 함_이정욱
+  // 질문 : 조건을 줄 때 타입이 any인 state 값을 state안에 true로 감싸는 이유? _ 감싸져 있을 때 버튼 클릭 시 이벤트가 안일어나고, 중괄호 벗기면 로그인 페이지로 감_ 이정욱
   const onClickBtn = () => {
     navigate("/login", { state: { state: true } });
   };
 
   // 반응형 웹
+  // 디바이스 폭 기준이라, 창을 늘리거나 줄여도 반응 x
   const isPc = useMediaQuery({
     query: "(min-width:768px)",
   });
